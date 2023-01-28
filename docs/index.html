@@ -22,19 +22,11 @@
   <script src="https://cdn.jsdelivr.net/gh/zignis/docsify-fa/script.min.js"></script> <!-- Allows the use of fontawesome icons in markdown (https://github.com/zignis/docsify-fa)-->
   <script>
     window.$docsify = {
-      search: 'auto',
-      loadSidebar: true,
-      name: 'Index',
+      search: 'auto', // default
+      search: [
+        '/',
+      ],
       repo: '',
-      search: {
-        noData: {
-          '/': 'No results!'
-        },
-        paths: 'auto',
-        placeholder: {
-          '/': 'Search'
-        }
-      },
       plugins: [
         function (hook) {
           const footer = [
@@ -47,12 +39,27 @@
             '</span>',
             '</footer>'
           ].join('');
-
+          
           hook.afterEach(function (html) {
             return html + footer;
           });
         }
       ],
+      auto2top: true,
+      executeScript: true,
+      loadSidebar: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      name: 'Index',
+      search: {
+        noData: {
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': 'Search'
+        }
+      },
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
