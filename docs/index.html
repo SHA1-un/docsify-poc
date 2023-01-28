@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Dark-light theme plugin: https://docsify-darklight-theme.boopathikumar.me/#/ -->
 <head>
   <meta charset="UTF-8">
   <title>Gatekeeper Docs</title>
-  <!-- <link rel="icon" type="image/png" href="/images/favicon.png" /> -->
+  <link rel='shortcut icon' href='myfavicon.ico' type='image/x-icon'>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
 
+  <!-- Stylesheet to use FontAwesome icons on html -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
-    title="docsify-darklight-theme" type="text/css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
 </head>
 
 <body>
   <div id="app"></div>
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/zignis/docsify-fa/script.min.js"></script> <!-- Allows the use of fontawesome icons in markdown (https://github.com/zignis/docsify-fa)-->
   <script>
     window.$docsify = {
       search: 'auto',
-      name: 'Docs',
+      loadSidebar: true,
+      name: 'Index',
       repo: '',
       search: {
         noData: {
@@ -34,14 +37,12 @@
       },
       plugins: [
         function (hook) {
-          const link_light = '';
-          const link_dark = '';
           const footer = [
             '<footer style="text-align: center;margin-top: 50px;">',
             '<span>',
             'Made by ',
             '<a href="https://github.com/SHA1-un" target="_blank">SHA1-un ',
-            '<i class="fa-solid fa-up-right-from-square"></i>',
+            `<i class="fa-solid fa-up-right-from-square"></i>`,
             '</a >',
             '</span>',
             '</footer>'
@@ -54,9 +55,6 @@
       ],
     }
   </script>
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script> -->
-
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript">
